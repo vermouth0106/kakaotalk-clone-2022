@@ -1,0 +1,28 @@
+.nav {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: var(--whitegray);
+  border-top: 1px solid var(--lightgray);
+  padding: 15px 0px;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav__btn {
+  position: relative;
+}
+
+.nav__notification {
+  position: absolute;
+  top: -4px;
+  right: -7px;
+}
+
+.nav__chat-count {
+  width: 18px;
+  height: 18px;
+}

@@ -1,0 +1,51 @@
+.user-component {
+  justify-content: space-between;
+}
+
+.user-component,
+.user-component__column {
+  display: flex;
+  align-items: center;
+}
+
+.user-component__column:last-child {
+  color: var(--lightgray);
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.user-component__column:last-child span {
+  margin-right: 5px;
+}
+
+.user-component__avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 40%;
+  margin-right: 15px;
+}
+.user-component__avatar--lg {
+  width: 70px;
+  height: 70px;
+}
+
+.user-component__avatar--sm {
+  width: 50px;
+  height: 50px;
+}
+
+.user-component__title {
+  font-size: 20px;
+}
+
+.user-component__subtitle {
+  margin-top: 7px;
+  color: var(--gray);
+  font-size: 13px;
+}
+
+.user-component__msg-count {
+  width: 18px;
+  height: 18px;
+  margin-top: 10px;
+}
