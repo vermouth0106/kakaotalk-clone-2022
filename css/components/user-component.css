@@ -44,6 +44,10 @@
   font-size: 13px;
 }
 
+.user-component__subtitle i {
+  color: red;
+}
+
 .user-component__msg-count {
   width: 18px;
   height: 18px;

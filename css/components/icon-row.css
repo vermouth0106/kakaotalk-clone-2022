@@ -1,0 +1,16 @@
+.icon-row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.icon-row__icon {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.icon-row__icon span {
+  padding-top: 20px;
+  font-size: 14px;
+  width: 70px;
+}

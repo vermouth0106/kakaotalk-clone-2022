@@ -2,13 +2,28 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 50px var(--horizontal-space) 30px var(--horizontal-space);
+  padding: 40px var(--horizontal-space) 30px var(--horizontal-space);
 }
 
 .screen-header__title {
   font-size: 25px;
 }
 
+.screen-header__icons {
+  display: flex;
+  align-items: center;
+}
+
 .screen-header__icons span {
   margin: 0px 10px;
+}
+
+.screen-header__cog-box {
+  position: relative;
+}
+
+.screen-header__notification {
+  position: absolute;
+  top: -7px;
+  right: -15px;
 }

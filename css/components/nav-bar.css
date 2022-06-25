@@ -3,7 +3,7 @@
   position: fixed;
   bottom: 0;
   background-color: var(--whitegray);
-  border-top: 1px solid var(--lightgray);
+  border-top: var(--main-border);
   padding: 15px 0px;
 }
 
