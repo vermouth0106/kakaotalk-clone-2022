@@ -4,9 +4,14 @@
   padding: 20px 0px;
   border-bottom: var(--main-border);
   font-size: 18px;
+  justify-content: space-between;
 }
 
 .settings__setting i {
   margin-right: 20px;
   font-size: 22px;
+}
+
+.settings__setting-column:last-child {
+  opacity: 0.5;
 }
