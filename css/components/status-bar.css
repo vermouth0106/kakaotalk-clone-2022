@@ -1,15 +1,16 @@
 .status-bar {
+  padding: 5px 3px;
   position: fixed;
   top: 0;
   width: 100%;
-  box-sizing: border-box;
   display: flex;
   justify-content: center;
-  padding: 5px 3px;
+  box-sizing: border-box;
   background-color: inherit;
 }
 .status-bar__column {
   width: 33%;
+  color: white;
 }
 
 .status-bar__column:first-child span {
@@ -29,4 +30,9 @@
 
 .status-bar__column .fa-battery-full {
   margin: 0px 5px;
+  color: #3cf11a;
+}
+
+.status-bar__column .fa-bolt {
+  color: #fee91b;
 }

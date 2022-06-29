@@ -1,19 +1,29 @@
+#logo img {
+  transition: all 13s linear;
+}
+
+#logo img:hover {
+  transform: rotateY(2160deg);
+}
+
 .welcome-header {
-  margin: 85px 0px;
-  text-align: center;
+  margin-bottom: 85px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 .welcome-header__title {
   margin-bottom: 30px;
   font-size: 25px;
+  color: white;
 }
 
 .welcome-header__text {
   width: 50%;
   opacity: 0.5;
+  color: white;
 }
 
 #login-form {
@@ -23,22 +33,29 @@
 }
 
 #login-form input {
-  border: none;
   padding: 15px 0px;
+  border: none;
   font-size: 15px;
+  background: none;
 }
 
 #login-form input:not([type="submit"]) {
-  border-bottom: solid 1px var(--lightgray);
+  border-bottom: solid 1px var(--moon-color);
   transition: border-color 0.3s ease-in-out;
+  color: white;
 }
 
 #login-form input::placeholder {
-  color: var(--lightgray);
+  color: var(--moon-color);
+  transition: color 0.3s ease-in-out;
+}
+
+#login-form input:focus::placeholder {
+  color: transparent;
 }
 
 #login-form input:focus {
-  border-color: var(--yellow);
+  border-color: yellow;
 }
 
 #login-form input[type="password"] {
@@ -47,9 +64,14 @@
 
 #login-form input[type="submit"] {
   border-radius: 5px;
-  background-color: var(--yellow);
+  background-color: var(--moon-color);
   margin: 5px 0px;
   cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#login-form input[type="submit"]:hover {
+  background-color: yellow;
 }
 
 #login-form input:disabled {
@@ -61,5 +83,67 @@
   margin-top: 15px;
   text-align: center;
   text-decoration: none;
-  color: inherit;
+  color: white;
+}
+
+@keyframes hideSplashScreen {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes moveSplashLogo {
+  0% {
+    transform: none;
+  }
+  5% {
+    transform: translateX(-5px);
+  }
+  7% {
+    transform: none;
+  }
+  9% {
+    transform: translateX(5px);
+  }
+  11% {
+    transform: none;
+  }
+  13% {
+    transform: translateX(-5px);
+  }
+  15% {
+    transform: none;
+  }
+  17% {
+    transform: translateX(5px);
+  }
+  19% {
+    transform: none;
+  }
+  100% {
+    transform: scale(-0%) translateY(-800px);
+  }
+}
+
+#splash-screen {
+  position: absolute;
+  top: 0;
+  background-color: var(--navy);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: hideSplashScreen 0.4s ease-in-out forwards;
+  animation-delay: 2s;
+}
+
+#splash-screen img {
+  position: relative;
+  bottom: 100px;
+  animation: moveSplashLogo 2s ease-in-out forwards;
 }

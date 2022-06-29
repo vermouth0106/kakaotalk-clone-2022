@@ -1,8 +1,8 @@
 :root {
-  --whitegray: #f9f9fa;
   --lightgray: #9c9c9c;
-  --gray: #7c7c7c;
-  --yellow: #fae100;
+  --moon-color: #c6c8c5;
+  --navy: #152445;
+  --lightnavy: rgba(21, 36, 39, 0.5);
   --horizontal-space: 20px;
-  --main-border: 1px solid rgba(0, 0, 0, 0.2);
+  --main-border: 1px solid rgba(255, 255, 255, 0.7);
 }

@@ -4,12 +4,13 @@
 
 .more-suggestions {
   margin-top: 40px;
-  padding-top: 30px;
+  padding-top: 15px;
   border-top: var(--main-border);
 }
 
 .more-suggestions__title {
   margin-bottom: 25px;
+  color: white;
 }
 
 .more-suggestions__icons {
@@ -17,21 +18,25 @@
 }
 
 .more-suggestions__icon {
+  margin-right: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 30px;
 }
 
 .more-suggestions__icon-image {
+  margin-bottom: 10px;
+  width: 60px;
+  height: 60px;
+  border-radius: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60px;
-  height: 60px;
-  background-color: var(--yellow);
-  border-radius: 20%;
-  margin-bottom: 10px;
+  background-color: var(--moon-color);
+}
+
+.more-suggestions__icon-text {
+  color: white;
 }
 
 .more-suggestions__icon-image i {

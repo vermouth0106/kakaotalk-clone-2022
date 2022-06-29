@@ -1,0 +1,9 @@
+.ad-bar {
+  margin-bottom: 10px;
+}
+
+.ad-bar img {
+  width: 100%;
+  height: 90px;
+  border-radius: 25px;
+}

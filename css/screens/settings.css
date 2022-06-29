@@ -1,15 +1,19 @@
 .settings__setting {
-  display: flex;
-  align-items: center;
   padding: 20px 0px;
   border-bottom: var(--main-border);
-  font-size: 18px;
+  display: flex;
   justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
 }
 
 .settings__setting i {
   margin-right: 20px;
   font-size: 22px;
+}
+
+.settings__setting-column {
+  color: white;
 }
 
 .settings__setting-column:last-child {

@@ -1,5 +1,5 @@
 #chat-screen {
-  background-color: rgb(171, 192, 209);
+  background-color: var(--navy);
 }
 
 #chat-screen .status-bar {
@@ -8,58 +8,76 @@
 
 #chat-screen .alt-header {
   z-index: 1;
-  top: 0;
   position: fixed;
+  top: 0;
   width: 100%;
   box-sizing: border-box;
-  background-color: rgba(171, 192, 209, 0.7);
   backdrop-filter: blur(3px);
+  background-color: var(--lightnavy);
+}
+
+.main-chat {
+  margin-top: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @keyframes fadeIn {
-  to {
-    transform: translateY(-30px);
-    opacity: 0;
-  }
   from {
+    transform: translateY(30px);
+  }
+  to {
     transform: none;
     opacity: 1;
   }
 }
 
-.main-chat {
-  margin-top: 120px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  animation: fadeIn 0.8s linear;
-}
-
 .chat__timestamp {
-  color: white;
-  background-color: #92a4b2;
+  margin-bottom: 20px;
   padding: 8px 15px;
   border-radius: 25px;
+  opacity: 0;
   font-size: 14px;
-  margin-bottom: 20px;
+  color: white;
+  background-color: #92a4b2;
+  animation: fadeIn 0.5s linear forwards;
+  animation-delay: 0.5s;
 }
 
 .message-row {
+  margin-bottom: 15px;
   display: flex;
   width: 100%;
-  margin-bottom: 15px;
 }
 
 .message-row img {
+  margin-right: 15px;
   width: 40px;
   height: 40px;
   border-radius: 15px;
-  margin-right: 15px;
+}
+
+.message-row img,
+.message-row .message__author {
+  opacity: 0;
+}
+
+.message-row:nth-child(2) img,
+.message-row:nth-child(2) .message__author {
+  animation: fadeIn 0.1s linear forwards;
+  animation-delay: 2s;
+}
+
+.message-row:nth-child(3) img,
+.message-row:nth-child(3) .message__author {
+  animation: fadeIn 0.1s linear forwards;
+  animation-delay: 4s;
 }
 
 .message__author {
-  display: block;
   margin-bottom: 8px;
+  display: block;
 }
 
 .message__info {
@@ -68,46 +86,88 @@
 }
 
 .message__bubble {
+  padding: 13px;
+  margin-right: 5px;
   background-color: white;
   border-radius: 15px;
   border-top-left-radius: 0px;
   font-size: 18px;
-  padding: 13px;
-  margin-right: 5px;
+}
+
+.message__bubble,
+.message__time {
+  transform: scale(0%);
+}
+
+@keyframes scaleBubble {
+  from {
+    transform: scale(1%) translateX(-150px);
+  }
+  to {
+    transform: scale(100%) translateX(0px);
+  }
+}
+
+.message-row:nth-child(2) .message__bubble,
+.message-row:nth-child(2) .message__time {
+  animation: scaleBubble 0.1s ease-in-out forwards;
+  animation-delay: 2.5s;
+}
+
+.message-row:nth-child(3) .message__bubble,
+.message-row:nth-child(3) .message__time {
+  animation: scaleBubble 0.1s ease-in-out forwards;
+  animation-delay: 4.5s;
 }
 
 .message__author,
 .message__time {
-  opacity: 0.5;
+  opacity: 0.7;
   font-size: 14px;
+  color: white;
 }
 
 .message-row--own {
   justify-content: flex-end;
 }
 
+@keyframes scaleBubbleReverse {
+  from {
+    transform: scale(1%) translateX(300px);
+  }
+  to {
+    transform: scale(100%) translateX(0px);
+  }
+}
+
 .message-row--own .message__bubble {
-  background-color: var(--yellow);
-  border-top-left-radius: 15px;
-  border-top-right-radius: 0px;
   margin-right: 0px;
   margin-left: 5px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 0px;
+  background-color: yellow;
 }
 
 .message-row--own .message__info {
   flex-direction: row-reverse;
 }
 
+.message-row--own .message__bubble,
+.message-row--own .message__time {
+  animation: scaleBubbleReverse 0.1s ease-in-out forwards;
+  animation-delay: 6.5s;
+}
+
 .reply {
+  padding: 5px 25px;
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: white;
   display: flex;
   justify-content: space-between;
-  padding: 5px 25px;
   align-items: center;
   box-sizing: border-box;
+  background-color: white;
 }
 
 .reply .reply__column:first-child {
@@ -129,6 +189,7 @@
   border: var(--main-border);
   border-radius: 28px;
   box-sizing: border-box;
+  box-shadow: 0px 0px 10px black;
   transition: all 0.3s ease-in-out;
 }
 
@@ -145,7 +206,7 @@
 }
 
 .reply__column button {
-  background-color: var(--yellow);
+  background-color: yellow;
   border: none;
   width: 40px;
   height: 40px;
@@ -164,13 +225,16 @@
 .reply .reply__column:first-child,
 .reply .fa-smile-wink,
 .reply button {
-  transition: opacity 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .reply:focus-within .reply__column:first-child,
-.reply:focus-within .fa-smile-wink,
-.reply:focus-within button {
+.reply:focus-within .fa-smile-wink {
   opacity: 0;
+}
+
+.reply:focus-within button {
+  transform: translateX(13px);
 }
 
 .reply input:focus {
