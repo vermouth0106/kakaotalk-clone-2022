@@ -63,16 +63,22 @@
   opacity: 0;
 }
 
-.message-row:nth-child(2) img,
-.message-row:nth-child(2) .message__author {
+.message-row--friend:nth-child(2) img,
+.message-row--friend:nth-child(2) .message__author {
   animation: fadeIn 0.1s linear forwards;
   animation-delay: 2s;
 }
 
-.message-row:nth-child(3) img,
-.message-row:nth-child(3) .message__author {
+.message-row--friend:nth-child(3) img,
+.message-row--friend:nth-child(3) .message__author {
   animation: fadeIn 0.1s linear forwards;
   animation-delay: 4s;
+}
+
+.message-row--friend:nth-child(5) img,
+.message-row--friend:nth-child(5) .message__author {
+  animation: fadeIn 0.1s linear forwards;
+  animation-delay: 8s;
 }
 
 .message__author {
@@ -94,6 +100,11 @@
   font-size: 18px;
 }
 
+.message__bubble img {
+  width: 200px;
+  height: 100px;
+}
+
 .message__bubble,
 .message__time {
   transform: scale(0%);
@@ -111,13 +122,19 @@
 .message-row:nth-child(2) .message__bubble,
 .message-row:nth-child(2) .message__time {
   animation: scaleBubble 0.1s ease-in-out forwards;
-  animation-delay: 2.5s;
+  animation-delay: 2.8s;
 }
 
 .message-row:nth-child(3) .message__bubble,
 .message-row:nth-child(3) .message__time {
   animation: scaleBubble 0.1s ease-in-out forwards;
-  animation-delay: 4.5s;
+  animation-delay: 4.8s;
+}
+
+.message-row:nth-child(5) .message__bubble,
+.message-row:nth-child(5) .message__time {
+  animation: scaleBubble 0.1s ease-in-out forwards;
+  animation-delay: 8.8s;
 }
 
 .message__author,

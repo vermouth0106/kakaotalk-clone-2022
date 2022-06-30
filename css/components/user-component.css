@@ -69,3 +69,38 @@
 .user-component__music-msg span {
   color: white;
 }
+
+@keyframes waveDot {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+.dot {
+  color: greenyellow;
+  font-size: 15px;
+  animation: waveDot 0.8s linear infinite;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.dot:last-child {
+  animation-delay: 0.2s;
+}
+
+.dotdotdot {
+  display: flex;
+  justify-content: center;
+  width: 35px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+}

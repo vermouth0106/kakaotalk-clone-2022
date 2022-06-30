@@ -4,14 +4,17 @@
 }
 
 .icon-row__icon {
+  padding: 5px;
   display: flex;
   flex-direction: column;
   text-align: center;
+  border-radius: 10px;
   color: white;
   transition: transform 0.2s ease;
 }
 
 .icon-row__icon:hover {
+  box-shadow: 0px 0px 8px white;
   transform: translateY(-4px);
 }
 

@@ -26,19 +26,18 @@
 
 .more-suggestions__icon-image {
   margin-bottom: 10px;
-  width: 60px;
-  height: 60px;
-  border-radius: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--moon-color);
 }
 
-.more-suggestions__icon-text {
+.more-suggestions__icon-image img {
+  width: 60px;
+  height: 60px;
+  border-radius: 20%;
   color: white;
 }
 
-.more-suggestions__icon-image i {
+.more-suggestions__icon-text {
   color: white;
 }
