@@ -29,12 +29,12 @@
   transform: translateY(-4px);
 }
 
-.screen-header__cog-box {
+.screen-header__box {
   position: relative;
 }
 
 .screen-header__notification {
   position: absolute;
   top: -7px;
-  right: -15px;
+  right: -20px;
 }
